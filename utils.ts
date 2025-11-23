@@ -1,5 +1,3 @@
-import { Representative } from './types';
-
 export const masks = {
   cpf: (value: string) => {
     return value
@@ -39,36 +37,10 @@ export const unmask = (value: string) => {
   return value.replace(/\D/g, '');
 };
 
-// Configurações Básicas
+// Constants from original code
+export const FATHER_ID = "110956";
 export const CSRF_TOKEN = "oD4xhofopobiuV5HIISyXw6lOn2dP1TLajSFbUgK"; 
 export const CPF_API_TOKEN = "2|VL3z6OcyARWRoaEniPyoHJpPtxWcD99NN2oueGGn4acc0395";
-
-// Lista de Representantes (Base de Dados Simulada)
-export const REPRESENTATIVES: { [key: string]: Representative } = {
-  "110956": {
-    id: "110956",
-    nome: "Francisco Eliedisom Dos Santos",
-    whatsapp: "",
-  },
-  "134684": {
-    id: "134684",
-    nome: "William Dos Santos Pessoa",
-    whatsapp: "5521969400194",
-  },
-  "135302": {
-    id: "135302",
-    nome: "Antonia Erivania Delmiro Jacinto",
-    whatsapp: "558498410187",
-  },
-  "153542": {
-    id: "153542",
-    nome: "Aline Aparecida Melo",
-    whatsapp: "553193371195",
-  },
-};
-
-// Representante Padrão (Francisco)
-export const DEFAULT_REPRESENTATIVE = REPRESENTATIVES["110956"];
 
 export const PLANS: { [key: string]: Array<{ id: string; label: string }> } = {
   VIVO: [
